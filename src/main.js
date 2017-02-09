@@ -9,6 +9,7 @@ import VueValidator from 'vue-validator';
 
 import Login from './components/login/login';
 import MainPage from './components/mainPage/page';
+import BloodPage from './components/blood/BloodPage';
 
 Vue.use(VueRoute);
 Vue.use(VueResource);
@@ -29,6 +30,11 @@ const routes = [{
     name: 'second',
     path: '/MainPage',
     component: MainPage
+  },
+  {
+    name: 'Blood',
+    path: '/BloodPage',
+    component: BloodPage
   }
 ];
 

@@ -1,3 +1,4 @@
 {
-    "url": "http://dev.haomio.com/api/consumer/"
+    "url": "http://10.0.1.47:8088/api/consumer/",
+    "url-service": "http://dev.haomio.com/api/consumer/"
 }
