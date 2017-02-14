@@ -37,7 +37,7 @@
       intoblood: function () {
         this.$router.push('/BloodPage');
         this.$http({
-            url: dataJson.url + 'oauth/token', // Login adress
+            url: dataJson.url + 'oauth/token', // Login adress 大叔大婶大所大所大所大所多撒大所大所多
             params: {
             },
             headers: {
