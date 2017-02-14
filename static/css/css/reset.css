@@ -288,7 +288,7 @@ margin-left:auto;
 margin-right:auto;
 max-width: 500px;
 background: #F7F7F7;
-padding: 25px 15px 25px 10px;
+padding: 0px 0px 0px 0px;
 font: 14px Georgia, ”Times New Roman”, Times, serif;
 color: #888;
 text-shadow: 1px 1px 1px #FFF;
@@ -331,3 +331,9 @@ padding: 5px 3px 3px 5px;
 .basic-grey textarea{
 height:100px;
 }
+.hr {
+    width: 100%;
+    border: 1px dashed;
+    color: gray;
+    height: 1px;
+  }

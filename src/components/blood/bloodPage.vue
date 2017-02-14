@@ -19,7 +19,7 @@
                 <button type="button" class="btn btn-warning btn-sm" @click="bloodinputpage(3)">上传照片</button>
               </div>-->
           <div class="col-xs-3">
-            <button type="button" class="btn btn-warning  btn-sm" @click="bloodinputpage(4)">留言/回复<span class="badge">42</span></button>
+            <button type="button" class="btn btn-warning  btn-sm" @click="bloodinputpage(3)">留言/回复<span class="badge">42</span></button>
           </div>
         </div>
       </nav>
@@ -39,6 +39,9 @@
           <div v-show="uploadPic">
             <v-uploadPic></v-uploadPic>
           </div>
+          <div v-show="searchBlood">
+            <v-searchBlood></v-searchBlood>
+          </div>
         </div>
       </div>
     </div>
@@ -47,6 +50,7 @@
 <script>
   import bloodHistory from '../blood/bloodhistory/bloodHistory';
   import bloodInput from '../blood/bloodinput/bloodInput';
+  import searchBlood from '../blood/searchBlood/searchBlood';
   import leaveMessage from '../blood/leavemessage/leaveMessage';
   import uploadPic from '../blood/uploadPic/uploadPic';
   import header from '../header/header';
@@ -56,7 +60,8 @@
         bloodinput: true,
         leaveMessage: false,
         bloodHistory: false,
-        uploadPic: false
+        uploadPic: false,
+        searchBlood: false
       };
     },
     components: {
@@ -64,7 +69,8 @@
       'v-bloodInput': bloodInput,
       'v-leaveMessage': leaveMessage,
       'v-bloodHistory': bloodHistory,
-      'v-uploadPic': uploadPic
+      'v-uploadPic': uploadPic,
+      'v-searchBlood': searchBlood
     },
     methods: {
       bloodinputpage: function (n) {
@@ -73,18 +79,21 @@
           this.leaveMessage = false;
           this.bloodHistory = false;
           this.uploadPic = false;
+          this.searchBlood = false;
         }
         if (n === 2) {
+          this.bloodinput = false;
+          this.leaveMessage = false;
+          this.bloodHistory = false;
+          this.uploadPic = false;
+          this.searchBlood = true;
+        }
+        if (n === 3) {
           this.bloodinput = false;
           this.leaveMessage = true;
           this.bloodHistory = false;
           this.uploadPic = false;
-        }
-        if (n === 3) {
-          this.bloodinput = false;
-          this.leaveMessage = false;
-          this.bloodHistory = true;
-          this.uploadPic = false;
+          this.searchBlood = false;
         }
         if (n === 4) {
           this.bloodinput = false;
